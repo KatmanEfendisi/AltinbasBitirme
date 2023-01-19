@@ -45,7 +45,7 @@ namespace CoreDemo.Controllers
             var usermail = User.Identity.Name;
             var writerID = c.Writers.Where(x => x.WriterMail == usermail).Select(y => y.WriterID).FirstOrDefault();
             p.SenderID = writerID;
-            p.ReceiverID = 7;
+            int? receiverID = p.ReceiverID;
             p.MessageStatus = true;
             p.MessageDate = Convert.ToDateTime(DateTime.Now.ToShortDateString());
             mm.TAdd(p);
