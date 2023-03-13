@@ -44,7 +44,11 @@
 											<i class="fa-solid fa-clock-rotate-left"></i> @Math.Ceiling((item.BlogContent.Split(" ").Length)*0.3/60) Dk Okuma
 										</a>
 									</li>
-
+                                    <li class="mx-2">
+                                        <a href="#">
+                                            <i class="fas fa-wallet"></i> @item.TicketPrice TL
+                                        </a>
+                                    </li>
                             </ul>
                             <h5 class="card-title">
                                     <a href="/Blog/BlogReadAll/@item.BlogID/">@item.BlogTitle</a>

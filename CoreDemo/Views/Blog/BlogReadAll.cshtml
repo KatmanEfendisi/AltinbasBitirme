@@ -25,7 +25,7 @@
 						<div class="b-grid-top">
 							<div class="blog_info_left_grid">
 									<a href="/Blog/Index/">
-										<img src="https://altinbasedutrstorage.blob.core.windows.net/altinbasedutrblob/3197455d_etkinlikler-banner.jpg" class="img-fluid" alt="">
+										<img src="@item.BlogImage" class="img-fluid" alt="">
 								</a>
 							</div>
 							<div class="blog-info-middle">
@@ -50,7 +50,11 @@
 												<i class="fa-regular fa-clock"></i> @Math.Ceiling((item.BlogContent.Split(" ").Length) * 0.3 / 60) Dk Okuma
 										</a>
 									</li>
-
+										<li class="mx-2">
+											<a href="#">
+												<i class="fas fa-wallet"></i> @item.TicketPrice TL
+											</a>
+										</li>
 								</ul>
 							</div>
 						</div>
@@ -61,7 +65,7 @@
 						<p>
 							@item.BlogContent
 						</p>
-						<a href="/Blog/Index/" class="btn btn-primary read-m">Satın Al</a>
+							<a href="/BiletAlma/Index/" class="btn btn-primary read-m">Satın Al</a>
 					</div>
 					}
 					@await Component.InvokeAsync("CommentListByBlog",new{id=ViewBag.i})
